@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<title></title>
+	</head>
+	<body>
+
+
+
+		<form name="lword" method="">
+			<table align="center">
+				<tbody>
+					<tr>
+						<td>
+							名字:
+						</td>
+						<td>
+							<input type="text" name="name" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							留言信息:
+						</td>
+						<td>
+							<input type="text" name="msg" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							邮箱:
+						</td>
+						<td>
+							<input type="text" name="email" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							QQ:
+						</td>
+						<td>
+							<input type="text" name="qq" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							电话:
+						</td>
+						<td>
+							<input type="text" name="phone" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							公司:
+						</td>
+						<td>
+							<input type="text" name="company" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							地址:
+						</td>
+						<td>
+							<input type="text" name="address" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							备注:
+						</td>
+						<td>
+							<input type="text" name="notes" value="" />
+						</td>
+					</tr>
+					<tr align="center">
+						<td colspan="2">
+							<input type="submit" onclick="open53_lword()" value="提交" />
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+
+
+
+		<script>
+			//1. 这是53的网页咨询链接（网页咨询链接又称为挂码，以下以挂码代称），访客端api都是通过调用挂码创建的资源对象实现的。
+			//*2. 挂码必须在线上环境加载，本地是无法加载的
+			//3. 下面挂码替换成自己账号的挂码。自己账号的挂码在 53后台--风格设置--渠道-挂码和链接 中获取，或者联系客户经理获取
+			(function() {
+				var _53code = document.createElement("script");
+				_53code.src = "https://tb.53kf.com/code/code/a5b71a8715735f471bddae980fb40e370/1";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(_53code, s);
+			})();
+		</script>
+
+
+
+		<script>
+			// 1. 对应的文档 https://www.eiisys.com/home/apiDetails?id=00300000019
+			// 2. 下述字段中，cmd和msg这两个字段是必须要的，不然无法使用api。其他字段可以增减
+			// 3. 表单是以留言形式直接传到53后台的，客服端上看不到，也没有提示。不过可以在 53后台--系统设置--全局设置，用微信扫码绑定微信服务通知。
+			//		53账号分配到留言，绑定的微信上会有通知
+			// 4. 下面方法可以直接在网站上使用，根据需求可删减一些字段
+			function open53_lword() {
+				var _53api = $53.createApi();
+				_53api.push('cmd', "lword");				//必填
+				_53api.push('name', lword.name.value);			//选填
+				_53api.push('msg', lword.msg.value);		//必填
+				_53api.push('email', lword.email.value);		//选填
+				_53api.push('qq', lword.qq.value);				//选填
+				_53api.push('phone', lword.phone.value);		//选填
+				_53api.push('company', lword.company.value);	//选填
+				_53api.push('address', lword.address.value);	//选填
+				_53api.push('notes', lword.notes.value);		//选填
+				_53api.query()
+			}
+		</script>
+
+	</body>
+</html>
