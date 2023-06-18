@@ -1,0 +1,869 @@
+/*顶部通栏 START */
+
+#Header #logo img.logo-custom {
+    display: none;
+}
+
+#Header #logo img.logo-white {
+    display: block;
+}
+
+#Header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, .1);
+    z-index: 701;
+    box-shadow: none;
+}
+
+#Header .menu>li>a {
+    color: white;
+}
+
+#Header .menu>li.submenu>a:hover,
+#Header .menu>li.submenu.hover>a {
+    /* color: #1C58FF; */
+    color: white;
+    font-weight: bold;
+}
+
+#Header.is-sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, .99) !important;
+    z-index: 701;
+    box-shadow: 0px 3px 6px rgb(128 128 128 / 16%);
+}
+
+#Header.is-sticky .menu>li>a {
+    color: #34495e;
+}
+
+#Header.is-sticky .menu>li.submenu>a:hover,
+#Header.is-sticky .menu>li.submenu.hover>a {
+    color: #1C58FF;
+    font-weight: bold;
+}
+
+#Header .menu>li:last-child .slogan span:last-child {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+#Header .menu>li:last-child .link a {
+    color: #135ef8;
+    background: rgba(255, 255, 255);
+}
+
+#Header .menu>li:last-child .slogan span:last-child a {
+    color: white;
+}
+
+#Header .menu>li:last-child .slogan span {
+    color: white;
+}
+
+#Header.is-sticky .menu>li:last-child .link a {
+    color: white;
+    background: #135ef8;
+}
+
+#Header.is-sticky .menu>li:last-child .slogan span:last-child a {
+    color: #135ef8;
+}
+
+#Header.is-sticky .menu>li:last-child .slogan span {
+    color: #135ef8;
+}
+
+
+/* 轮播图处理 */
+
+.edslider .controls {
+    top: auto;
+    bottom: 50px !important;
+}
+
+.edslider .controls .navigator {
+    background-color: transparent;
+    opacity: 0.3;
+    top: 45%;
+}
+
+.edslider .controls .paginator {
+    top: 90%;
+}
+
+.edslider .controls .paginator li {
+    opacity: 0.5;
+}
+
+.edslider .controls .paginator li.current {
+    background: white;
+}
+
+@media only screen and (min-width: 1890px) {
+    .edslider .controls .paginator {
+        top: 95%;
+    }
+}
+
+.edslider .controls .paginator li {
+    height: 8px;
+    width: 28px;
+    border-radius: 6px;
+}
+
+
+/*顶部通栏 END */
+
+
+/***********首页*****************/
+
+#index-service {
+    background: #F6F9FF;
+}
+
+#index-service .container {
+    padding: 30px 0px;
+}
+
+#index-service .one-fourth {
+    position: relative;
+}
+
+#index-service .one-fourth .icon_box {
+    text-align: center;
+}
+
+#index-service .one-fourth:nth-child(2):after,
+#index-service .one-fourth:nth-child(3):after,
+#index-service .one-fourth:nth-child(4):after {
+    display: block;
+    content: '';
+    width: 1px;
+    background: #707070;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    opacity: 0.3;
+}
+
+#index-service .one-fourth .icon_box img {
+    width: 30px;
+}
+
+#index-service .one-fourth .icon_box h3 {
+    height: 17px;
+    font-size: 12px;
+    font-family: PingFang SC-Bold, PingFang SC;
+    font-weight: bold;
+    color: #000000;
+    line-height: 17px;
+    margin-top: 20px;
+}
+
+#index-service .one-fourth .icon_box p {
+    height: 14px;
+    font-size: 10px;
+    font-family: PingFang SC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #AAAAAA;
+    line-height: 14px;
+    margin-top: 10px;
+}
+
+.goods-list .header-column .text-center h2 {
+    position: relative;
+    vertical-align: middle;
+}
+
+.goods-list .header-column .text-center h2 a {
+    margin: 0px 30px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.goods-list .header-column .text-center h2 span {
+    display: inline-block;
+    width: 60px;
+    height: 1px;
+    background: #707070;
+    vertical-align: middle;
+}
+
+.goods-list .container .column .icon_box {
+    display: block;
+    padding: 50px 30px;
+    box-sizing: border-box;
+    height: 395px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 6px 6px 6px 6px;
+    opacity: 1;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.goods-list .container .column .icon_box:hover {
+    background: #FFFCFB;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #FA5802;
+}
+
+.goods-list .container .column .icon_box:hover .a {
+    background: #FA5802;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #FA5802;
+    color: white;
+}
+
+.goods-list .container .column .icon_box h3 {
+    height: 44px;
+    font-size: 16px;
+    font-family: PingFang SC-Bold, PingFang SC;
+    font-weight: bold;
+    color: #000000;
+    line-height: 22px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    ;
+}
+
+.goods-list .container .column .icon_box ul li {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.goods-list .container .column .icon_box ul li div {
+    flex-grow: 1;
+    width: 50%;
+}
+
+.goods-list .container .column .icon_box ul li div .label {
+    height: 25px;
+    font-size: 12px;
+    font-family: PingFang SC-Bold, PingFang SC;
+    font-weight: bold;
+    color: #555;
+    line-height: 0px;
+}
+
+.goods-list .container .column .icon_box ul li div .num {
+    height: 25px;
+    font-size: 18px;
+    font-family: PingFang SC-Bold, PingFang SC;
+    font-weight: bold;
+    color: #FA5802;
+    line-height: 0px;
+}
+
+.goods-list .container .column .icon_box p {
+    height: 44px;
+    font-size: 12px;
+    font-family: PingFang SC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #707070;
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.goods-list .container .column .icon_box .line {
+    border-top: 1px solid rgba(112, 112, 112, 0.3);
+}
+
+.goods-list .container .column .icon_box .a {
+    display: block;
+    margin: 40px auto 0px auto;
+    text-align: center;
+    font-size: 16px;
+    font-family: PingFang SC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FA5802;
+    line-height: 0px;
+    height: 40px;
+    line-height: 40px;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 20px 20px 20px 20px;
+    opacity: 1;
+    border: 1px solid #F02861;
+}
+
+.goods-list .container .column .icon_box .tag {
+    background: #FF0000;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    left: -44px;
+    top: 18px;
+    transform: rotate(-45deg);
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
+}
+
+#goods-scrollview {
+    background: url('../images/goods-bg.png') center center no-repeat;
+    background-size: cover;
+}
+
+#goods-scrollview .container {
+    overflow: hidden;
+}
+
+#goods-scrollview .goods-swiper-container .one-fourth .icon_box {
+    padding: 30px;
+    height: 447px;
+    position: relative;
+    overflow: hidden;
+}
+
+#goods-scrollview .goods-swiper-container .one-fourth .icon_box h3 {
+    height: 40px;
+    line-height: 20px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border: none;
+}
+
+#goods-scrollview .goods-swiper-container .one-fourth .icon_box h3:after {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #FA5802;
+    border-radius: 0px 0px 0px 0px;
+    opacity: 1;
+    margin: auto;
+}
+
+#goods-scrollview .goods-swiper-container .icon_box .hline {
+    width: 40px;
+    height: 2px;
+    background: #FA5802;
+    border-radius: 0px 0px 0px 0px;
+    opacity: 1;
+    margin: auto;
+}
+
+#goods-scrollview .goods-swiper-container .icon_box ul li {
+    margin-top: 30px;
+}
+
+#goods-scrollview .goods-swiper-container .icon_box ul li div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#goods-scrollview .container .goods-swiper-pagination {
+    text-align: center;
+}
+
+#goods-scrollview .container .goods-swiper-pagination .swiper-pagination-bullet {
+    background: #CCC;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+    opacity: 1;
+    margin-right: 10px;
+}
+
+#goods-scrollview .container .goods-swiper-pagination .swiper-pagination-bullet-active {
+    background: #FA5802;
+    color: #fff;
+}
+
+#goods-scrollview .goods-swiper-container .one-fourth .icon_box .tag {
+    background: #FF0000;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    left: -44px;
+    top: 18px;
+    transform: rotate(-45deg);
+}
+
+#notice-scrollview .container {
+    height: 420px;
+    overflow: hidden;
+}
+
+#notice-scrollview .container ul {
+    display: flex;
+    flex-direction: column;
+    clear: both;
+}
+
+#notice-scrollview .container ul li {
+    height: 60px;
+    line-height: 60px;
+    display: flex;
+    border-bottom: 1px solid rgba(170, 170, 170, 0.3);
+}
+
+#notice-scrollview .container .notice-head li:first-child {
+    background: #F6F9FF;
+    color: #ADADAD;
+    font-weight: bold;
+    border: none;
+}
+
+#notice-scrollview .container ul li span {
+    width: 10%;
+    text-align: center;
+    font-size: 16px;
+    font-family: PingFang SC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #000000;
+}
+
+#notice-scrollview .container ul li span:first-child {
+    width: 40%;
+}
+
+#notice-scrollview .container .notice-list li span:nth-child(4),
+#notice-scrollview .container .notice-list li span:nth-child(6),
+#notice-scrollview .container .notice-list li span:nth-child(7) {
+    color: #FA5802;
+}
+
+#news-list {
+    background: #F6F9FF;
+}
+
+#news-list .one-third h3.catname {
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+#news-list .one-third h3.catname a {
+    height: 28px;
+    font-size: 20px;
+    font-family: PingFang SC-Bold, PingFang SC;
+    font-weight: bold;
+    color: #000000;
+}
+
+#news-list .one-third ul {
+    margin: 0;
+}
+
+#news-list .one-third ul li {
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 20px 0px;
+    margin: 0;
+}
+
+#news-list .one-third ul li:last-child {
+    border-bottom: 0;
+}
+
+#news-list .one-third ul li:before {
+    display: none;
+}
+
+#news-list .one-third ul li h3 {
+    height: 22px;
+    font-size: 16px;
+    font-family: PingFang SC-Bold, PingFang SC;
+    font-weight: bold;
+    color: #000000;
+    margin: 0px;
+    width: 100%;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#news-list .one-third ul li p {
+    height: 44px;
+    font-size: 12px;
+    font-family: PingFang SC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #707070;
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin: 10px 0px;
+    box-sizing: border-box;
+}
+
+#news-list .one-third ul li span {
+    display: block;
+}
+
+#news-list .one-third:first-child ul li img {
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+#news-list .one-third:first-child ul li p {
+    height: 66px;
+    -webkit-line-clamp: 3;
+    margin: 13px 0px 12px 0px;
+}
+
+#news-list .one-third:nth-child(2) ul li a {
+    display: flex;
+}
+
+#news-list .one-third:nth-child(2) ul li a div {
+    overflow: hidden;
+}
+
+#news-list .one-third:nth-child(2) ul li a img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    margin-right: 30px;
+    background: #ccc;
+}
+
+#news-list .one-third:last-child ul li {
+    padding: 0px;
+    border-bottom-width: 0;
+}
+
+#news-list .one-third {
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+}
+
+#news-list .one-third:last-child ul li:last-child {
+    border-bottom: #F6F9FF solid 2px;
+}
+
+#news-list .one-third:last-child ul li a {
+    border-bottom: none;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    font-family: PingFang SC-Bold, PingFang SC;
+    font-weight: bold;
+    color: #707070;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    margin: 10px 0px;
+    box-sizing: border-box;
+}
+
+#news-list .one-third:last-child ul li span {
+    display: inline;
+}
+
+#news-list .one-third:last-child ul li .num {
+    width: 22px;
+    height: 22px;
+    background: #AAAAAA;
+    border-radius: 4px 4px 4px 4px;
+    opacity: 1;
+    display: inline-block;
+    font-size: 16px;
+    font-family: PingFang SC-Bold, PingFang SC;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#news-list .one-third:last-child ul li:first-child .num {
+    background: #FA5802;
+}
+
+#news-list .one-third:last-child ul li:nth-child(2) .num {
+    background: #FCA90B;
+}
+
+#news-list .one-third:last-child ul li:nth-child(3) .num {
+    background: #FFE600;
+}
+
+
+/* 合作客户 */
+
+#index-customer .container ul li {
+    width: 19%;
+    display: inline-block;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+#index-customer .container ul li img {
+    width: 150px;
+    opacity: 1;
+    border-radius: 2px;
+    object-fit: contain;
+}
+
+#index-customer .container:after {
+    display: block;
+    content: ' ';
+    clear: both;
+}
+
+
+/*快捷菜单*/
+
+.flash-container {
+    position: relative;
+}
+
+.flash-container #shortcut-menu {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    margin-top: -116px;
+}
+
+.flash-container #shortcut-menu .container {
+    margin: auto;
+}
+
+.flash-container #shortcut-menu nav {
+    display: flex;
+    flex-direction: row;
+    background-color: #333;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.93);
+    border-radius: 8px;
+}
+
+.flash-container #shortcut-menu nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.flash-container #shortcut-menu nav li {
+    padding: 0 20px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.flash-container #shortcut-menu nav li h3 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.flash-container #shortcut-menu nav li h3 a {
+    height: 20px;
+    font-size: 18px;
+    font-family: PingFang SC-Bold, PingFang SC;
+    font-weight: bold;
+    color: #000000;
+    line-height: 20px;
+}
+
+.flash-container #shortcut-menu nav li .cates {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin: 0 0px 10px 0px;
+    padding: 0;
+}
+
+.flash-container #shortcut-menu nav li .cates a {
+    display: block;
+    width: 50%;
+    height: 18px;
+    font-size: 16px;
+    font-family: PingFang SC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 18px;
+    box-sizing: border-box;
+    margin: 3px 0px;
+    padding: 0;
+}
+
+.flash-container #shortcut-menu nav li:hover .sub {
+    display: block;
+    width: 600px;
+    height: 300px;
+    background: rgba(252, 252, 252, 0.93);
+    border-radius: 0px 8px 8px 0px;
+}
+
+.flash-container #shortcut-menu nav ul .sub {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 192px;
+    background: rgba(252, 252, 252, 0.93);
+    min-width: 200px;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.flash-container #shortcut-menu nav li .sub .cates {
+    border-top: 1px solid #FA5802;
+    padding-top: 10px;
+}
+
+.flash-container #shortcut-menu nav li .sub .cates a {
+    display: inline;
+    width: 70px;
+}
+
+.flash-container #shortcut-menu nav li .sub .goods .goods-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+    justify-content: space-between;
+}
+
+.flash-container #shortcut-menu nav li .sub .goods .goods-item div:first-child {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 91px;
+    width: 91px;
+    flex-shrink: 0;
+    height: 67px;
+    background: #FA5802;
+    border-radius: 9px 0px 0px 9px;
+    opacity: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.flash-container #shortcut-menu nav li .sub .goods .goods-item div:first-child .num {
+    height: 33px;
+    font-size: 24px;
+    font-family: PingFang SC-Bold, PingFang SC;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 33px;
+}
+
+.flash-container #shortcut-menu nav li .sub .goods .goods-item div:first-child .label {
+    height: 17px;
+    font-size: 12px;
+    font-family: PingFang SC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 17px;
+}
+
+.flash-container #shortcut-menu nav li .sub .goods .goods-item div:nth-child(2) {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+    height: 67px;
+    width: 389px;
+    flex-basis: 389px;
+    flex-shrink: 0;
+    justify-content: space-between;
+}
+
+.flash-container #shortcut-menu nav li .sub .goods .goods-item div:nth-child(2) h3 {
+    height: 30px;
+    font-size: 14px;
+    font-family: PingFang SC-Bold, PingFang SC;
+    font-weight: bold;
+    color: #000000;
+    line-height: 30px;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.flash-container #shortcut-menu nav li .sub .goods .goods-item div:nth-child(2) p {
+    height: 17px;
+    font-size: 12px;
+    font-family: PingFang SC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #707070;
+    line-height: 17px;
+    margin: 10px 0px;
+    display: inline-block;
+    padding: 0;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.flash-container #shortcut-menu nav li .sub .goods .goods-item div:last-child .a {
+    width: 70px;
+    flex-basis: 70px;
+    flex-shrink: 0;
+    text-align: center;
+    display: block;
+    height: 30px;
+    background: #FA5802;
+    border-radius: 15px 15px 15px 15px;
+    opacity: 1;
+    font-size: 12px;
+    font-family: PingFang SC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 30px;
+}
+
+.flash-container #shortcut-menu nav ul .sub li {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color: #fff;
+    font-size: 14px;
+}
+
+.flash-container #shortcut-menu nav ul .sub li:last-child {
+    border-bottom: none;
+}
