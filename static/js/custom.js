@@ -6,14 +6,19 @@ $(document).ready(function() {
     if ($("#custom-dialog").is(":visible")) {
         $('body,html').addClass('disable-scrolling');
     }
-    $("#close").click(function() {
-        if ($("#dialog-auth").is(":hidden")) {
-            $("#custom-dialog").hide();
-        } else {
-            history.go(-1);
-        }
-    });
+    // $("#close").click(function() {
+    //     if ($("#dialog-auth").is(":hidden")) {
+    //         $("#custom-dialog").hide();
+    //     } else {
+    //         history.go(-1);
+    //     }
+    // });
+    // 临时
 
+    $("#close").click(function() {
+        $('body,html').removeClass('disable-scrolling');
+        $("#custom-dialog").hide();
+    });
     //认证
     $("#authBtn").click(function() {
         var isContinue = true;
