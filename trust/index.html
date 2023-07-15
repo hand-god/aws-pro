@@ -58,7 +58,7 @@
     <div id="Wrapper">
         <div class="header_placeholder"></div>
         <header id="Header">
-            <div style="display: flex;justify-content: center;align-items: center;background-color: #fff;">
+            <div style="justify-content: center;align-items: center;background-color: #fff;">
                 <span style="margin-right: 10%;font-size: 14px;white-space: nowrap;">您好，欢迎来到亚风永续网!</span>
                 <span style="margin-right: 0;color: red;">投资有风险，认购需谨慎！</span>
             </div>
@@ -104,7 +104,7 @@
                             </li>
 
                             <li class="Lev1 menu-item-has-children  submenu ">
-                                <a style="font-size: 20px;" class="menu1" target="_blank">免费咨询热线: <span style="color: red;">181-6405-5180</span>		            <i class="fa fa-caret-down"></i> </a>
+                                <a style="font-size: 18px;" class="menu1" target="_blank">免费咨询热线: <span class="diy1_hover" style="color: #004c22;font-size: 22px;">181-6405-5180</span>		            <i class="fa fa-caret-down"></i> </a>
 
                                 <ul class="sub-menu dr-menu2" style="margin-left: -20px;">
                                 </ul>
@@ -120,7 +120,7 @@
         <div class="flash-container">
             <ul class="mySlideshow">
                 <li style="background:url(static/images/6458a1f04a960.jpg) center no-repeat;background-size:100%;">
-                    <a style="width: 100%;height: 100%;padding: 0;margin: 0;background: transparent;" onclick="showRegistration()"</a>
+                    <a style="width: 100%;height: 100%;padding: 0;margin: 0;background: transparent;" onclick="showRegistration()" </a>
                 </li>
             </ul>
             <!-- 快捷菜单 -->
@@ -868,7 +868,7 @@
                                                             </li>
                                                             <li>
                                                                 <div>
-                                                                    <span class="num">0个月</span>
+                                                                    <span class="num">20个月</span>
                                                                     <span class="label">续存期限</span>
                                                                 </div>
                                                                 <div>
@@ -1066,7 +1066,7 @@
                         //background
                     });
                 </script>
-                
+
                 <div id="custom-dialog" style="display: none;">
                     <div class="content ">
                         <div class="auth" id="dialog-auth" style="display: flex;">
@@ -1074,18 +1074,18 @@
                                 <img alt="" src="static/picture/logo222.png">
                             </div>
                             <div style="flex: 1;margin-bottom: 0;">
-                                <h2>动动手指 轻松获取</h2>
+                                <h2 class="dialog_headTitle">动动手指 轻松获取</h2>
                                 <ul style="width: 250px;">
                                     <li style="width: 230px;">
-                                        <span><font color="red">*</font>姓&nbsp;&nbsp;&nbsp;&nbsp;名</span><input type="text" style="width: 120px;" name="name" pattern="...">
+                                        <span style="color: red;" class="dialog_formKey"><font>*</font>姓&nbsp;&nbsp;&nbsp;&nbsp;名</span><input type="text" style="width: 120px;" name="name" pattern="...">
                                         <p></p>
                                     </li>
                                     <li style="width: 230px;">
-                                        <span><font color="red">*</font>手机号</span><input type="text" style="width: 120px;" name="phone" pattern="...">
+                                        <span style="color: red;" class="dialog_formValue"><font color="red">*</font>手机号</span><input type="text" style="width: 120px;" name="phone" pattern="...">
                                         <p></p>
                                     </li>
                                 </ul>
-    
+
                                 <button id="authBtnRegistration">立即领取</button>
                             </div>
                             <!-- <div class="protocol" style="    margin-top: 30px;">
@@ -1162,7 +1162,7 @@
                     success: function(res) {
                         // console.log('res', res);
                         let data = res.data,
-                        timeLength = data.length;
+                            timeLength = data.length;
                         if (timeLength > 0) {
                             var superior_product_list = [];
                             for (let i = 0; i < timeLength; i++) {
@@ -1219,7 +1219,7 @@
                                     let jsonData = encodeURI(jsonDataStr);
                                     let newWeb = window.open('_blank');
                                     // newWeb.location = `/trust/superior_product.html?jsonData=${jsonData}`;// 优质产品页面
-                                    newWeb.location = `/trust/superior_product.html?jsonData=${i}`;// 优质产品页面
+                                    newWeb.location = `/trust/superior_product.html?jsonData=${i}`; // 优质产品页面
                                 })
                                 superior_product_list[i] = {
                                     performanceBenchmark: data[i].performanceBenchmark, //历史年化收益
@@ -1245,6 +1245,30 @@
                         return false;
                     }
                 });
+                // 首页弹窗自定义信息
+                $.ajax({
+                    type: "GET",
+                    dataType: "Json",
+                    cache: false,
+                    url: "http://47.106.246.230:9090/head", // 首页弹窗自定义信息
+                    data: {},
+                    success: function(res) {
+                        if (res.code == 200) {
+                            $('.dialog_headTitle').text(res.data.headTitle);
+                            $('.dialog_formKey').text('*' + res.data.formKey);
+                            $('.dialog_formValue').text('*' + res.data.formValue);
+                            $('#authBtnRegistration').text(res.data.formSubmit);
+                            // headTitle: "测试标题"
+                            // formKey: "姓名"
+                            // formValue: "手机号"
+                            // formSubmit: "立即领取"
+                        }
+                    },
+                    error: function(res) {
+                        return false;
+                    }
+                });
             </script>
 </body>
+
 </html>

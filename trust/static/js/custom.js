@@ -8,20 +8,27 @@ $(document).ready(function() {
     if ($("#custom-dialog").is(":visible")) {
         $('body,html').addClass('disable-scrolling');
     }
-    // $("#close").click(function() {
-    //     if ($("#dialog-auth").is(":hidden")) {
-    //         $("#custom-dialog").hide();
-    //     } else {
-    //         window.close();
-    //     }
-    // });
-
-    // 临时
     $("#close").click(function() {
+        if ($("#dialog-auth").is(":hidden")) {
+            $("#custom-dialog").hide();
+        } else {
+            window.close();
+        }
+    });
+
+    var isCheck = getCookie('isCheck');
+    console.log('isCheck', isCheck);
+    if (isCheck == "yes") {
         $('body,html').removeClass('disable-scrolling');
         $("#custom-dialog").hide();
-    });
-    
+    }
+
+    // 临时
+    // $("#close").click(function() {
+    //     $('body,html').removeClass('disable-scrolling');
+    //     $("#custom-dialog").hide();
+    // });
+
     $("#closeBtnRegistration").click(function() {
         $('body,html').removeClass('disable-scrolling');
         $("#custom-dialog").hide();
@@ -76,7 +83,7 @@ $(document).ready(function() {
             reservation(productName, name, phone, edu.value);
         }
     });
-    
+
 
     //预约
     $("#orderBtn").click(function() {
